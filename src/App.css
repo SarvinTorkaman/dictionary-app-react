@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-header {
   margin: 30px auto;
@@ -15,16 +15,25 @@ body {
 }
 
 h2 {
-  text-align: center;
-  margin: 40px auto;
-  line-height: 2cm;
-  border: 1.5px solid rgb(53, 58, 55);
-  border-radius: 4px;
+  text-align: left;
+  margin: 10px auto;
+  font-weight: 700;
+  line-height: 1cm;
+  display: inline-block;
 }
 .container {
   background-color: honeydew;
   max-width: 80%;
   padding: 30px 30px;
+  border-radius: 4px;
+}
+
+.speaker-img {
+  transition: all 200ms ease-in-out;
+}
+
+.speaker-img:hover {
+  transform: scale(1.1);
 }
 
 .btn-success {
@@ -34,6 +43,15 @@ h2 {
   line-height: 1.5;
   margin-left: 20px;
   transition: all 200ms ease-in-out;
+}
+
+.btn-success:focus {
+  background-color: #2af598;
+  color: black;
+  max-width: 100px;
+  line-height: 1.5;
+  margin-left: 20px;
+  box-shadow: 0 0 0 0.25rem rgb(60 153 110 / 50%);
 }
 .btn-success:hover {
   background-color: #45a07a;
@@ -59,7 +77,7 @@ footer {
 }
 
 @media (max-width: 576px) {
-  .display {
+  .Result {
     text-align: left;
   }
 
@@ -76,7 +94,7 @@ footer {
 }
 
 @media (max-width: 388px) {
-  h2 {
+  h4 {
     display: none;
   }
 }

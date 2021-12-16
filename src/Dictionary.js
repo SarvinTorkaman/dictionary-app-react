@@ -1,19 +1,48 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Result from "./Result";
 export default function Dictionary() {
-  let [word, setWord] = useState("");
+  const [word, setWord] = useState("");
+  const [result, setResult] = useState(null);
   function getValue(event) {
     setWord(event.target.value);
   }
 
   function getResponse(response) {
-    console.log(response.data);
+    // console.log(response.data[0]);
+    // console.log(response.data);
+    // console.log(response.data[0].meanings[0]);
+    // console.log(response.data[0].phonetics[0]);
+    // console.log(response.data[0].origin);
+    // console.log(response.data[0].word);
+    setResult({
+      word: response.data[0].word,
+      meanings: response.data[0].meanings,
+      origin: response.data[0].origin,
+      audio: response.data[0].phonetics[0].audio,
+      text: response.data[0].phonetics[0].text,
+    });
+    // console.log(result.word);
+    // console.log(result.meanings);
+    // console.log(result.origin);
+    // console.log(result.audio);
+    // console.log(result.text);
+
+    //  console.log(response.data[0].meanings);
   }
   function getWord(event) {
     event.preventDefault();
     //documentation: https://dictionaryapi.dev
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    axios.get(apiUrl).then(getResponse);
+    if (word.length > 0) {
+      let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+      axios.get(apiUrl).then(getResponse);
+
+      axios.get(apiUrl).catch(function (error) {
+        alert(`${word} is not found in english dictionary`);
+      });
+    } else {
+      alert("Enter a word");
+    }
   }
 
   return (
@@ -34,6 +63,8 @@ export default function Dictionary() {
           />
         </div>
       </form>
+
+      <Result result={result} />
     </div>
   );
 }
