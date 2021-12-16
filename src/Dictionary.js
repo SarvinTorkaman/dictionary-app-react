@@ -35,6 +35,7 @@ export default function Dictionary() {
     //documentation: https://dictionaryapi.dev
     if (word.length > 0) {
       let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+      console.log(apiUrl);
       axios.get(apiUrl).then(getResponse);
 
       axios.get(apiUrl).catch(function (error) {
