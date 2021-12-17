@@ -54,7 +54,7 @@ export default function Dictionary() {
             type="text"
             className="search-box form-control input-box "
             onChange={getValue}
-            placeholder="enter any word"
+            placeholder="Enter a word"
             autoFocus={true}
           />
           <input
