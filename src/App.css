@@ -79,6 +79,8 @@ footer {
 @media (max-width: 576px) {
   .Result {
     text-align: left;
+    padding: 0;
+    margin: 0 auto;
   }
 
   .input-box {
@@ -90,6 +92,14 @@ footer {
     line-height: 1.5;
 
     margin: 20px auto;
+  }
+
+  .container {
+    padding: 25px 15px;
+  }
+
+  .search-box {
+    max-width: 50%;
   }
 }
 

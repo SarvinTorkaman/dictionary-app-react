@@ -49,17 +49,17 @@ export default function Dictionary() {
   return (
     <div className="Dictionary">
       <form className="" onSubmit={getWord}>
-        <div className="d-sm-flex justify-content-center d-block">
+        <div className="d-sm-flex justify-content-center mb-4 d-block">
           <input
             type="text"
-            className="form-control input-box"
+            className="search-box form-control input-box "
             onChange={getValue}
             placeholder="enter any word"
             autoFocus={true}
           />
           <input
             type="submit"
-            className="form-control btn-success shadow"
+            className="form-control d-none d-sm-block btn-success shadow"
             value="Search"
           />
         </div>
