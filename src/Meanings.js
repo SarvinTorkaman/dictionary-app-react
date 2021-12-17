@@ -11,7 +11,7 @@ export default function Meanings(props) {
           if (element.example !== undefined) {
             return (
               <div key={index}>
-                <p className="mt-2"> ● {element.definition}</p>
+                <p className="mt-2"> • {element.definition}</p>
 
                 <div>
                   {" "}
