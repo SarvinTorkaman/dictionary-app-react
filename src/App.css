@@ -4,8 +4,14 @@
 
 .App-header {
   margin: 30px auto;
+  font-family: "Tangerine", cursive;
+  font-size: 40px;
+  font-weight: 600;
 }
-
+.font-awsome-dictoinary-icon {
+  font-size: 25px;
+  color: rgb(15, 71, 15);
+}
 body {
   margin: 40px auto;
   background-color: #83c9cb;
@@ -24,6 +30,7 @@ h2 {
 .container {
   background-color: honeydew;
   max-width: 80%;
+
   padding: 30px 30px;
   border-radius: 4px;
 }
@@ -96,10 +103,18 @@ footer {
 
   .container {
     padding: 25px 15px;
+    max-width: 95%;
   }
 
   .search-box {
     max-width: 50%;
+  }
+
+  .App-header {
+    margin: 30px auto;
+    font-family: "Tangerine", cursive;
+    font-size: 20px;
+    font-weight: 600;
   }
 }
 

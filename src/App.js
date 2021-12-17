@@ -4,7 +4,13 @@ import "./App.css";
 function App() {
   return (
     <div className="App ">
-      <header className="App-header text-center"> Dictionary App</header>
+      <header className="App-header text-center">
+        {" "}
+        English Dictionary{" "}
+        <span className="font-awsome-dictoinary-icon">
+          <i class="fas fa-book"></i>
+        </span>
+      </header>
       <div className="container">
         <main>
           <Dictionary />{" "}
