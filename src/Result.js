@@ -1,17 +1,10 @@
 import React from "react";
 import Meanings from "./Meanings";
-// import speak from "./speak.png";
+import Phonetics from "./Phonetics";
 
 export default function Result(props) {
-  // console.log(props.result.meanings[0]);
-  // let [loaded, setLoaded] = useState(false);
-  //console.log(props.result.meanings);
-
-  // useEffect(() => {
-  //   setLoaded(true);
-  // }, [props.result.word]);
   function speak() {
-    var audio = new Audio(props.result.audio);
+    var audio = new Audio(props.result.phonetics[0].audio);
     audio.play();
   }
 
@@ -20,15 +13,24 @@ export default function Result(props) {
       return (
         <div className="Result ">
           <h2>{props.result.word}</h2>
-
           <img
+            src={require("./speak.png").default}
+            alt="Speak"
+            className=" speaker-img img-fluid pb-1 ps-2"
+            width="38"
+            onClick={speak}
+          />
+
+          <Phonetics phonetics={props.result.phonetics} />
+
+          {/* <img
             src={require("./speak.png").default}
             alt="Speak"
             className="speaker-img img-fluid pb-1 ps-2"
             width="38"
             onClick={speak}
           />
-          <h5 className="m-1 mt-3 mb-3">/{props.result.text}/</h5>
+          <h5 className="m-1 mt-3 mb-3">/{props.result.text}/</h5> */}
 
           <div>
             {props.result.meanings.map((meanings, index) => {

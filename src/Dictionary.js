@@ -9,26 +9,12 @@ export default function Dictionary() {
   }
 
   function getResponse(response) {
-    // console.log(response.data[0]);
-    // console.log(response.data);
-    // console.log(response.data[0].meanings[0]);
-    // console.log(response.data[0].phonetics[0]);
-    // console.log(response.data[0].origin);
-    // console.log(response.data[0].word);
     setResult({
       word: response.data[0].word,
       meanings: response.data[0].meanings,
       origin: response.data[0].origin,
-      audio: response.data[0].phonetics[0].audio,
-      text: response.data[0].phonetics[0].text,
+      phonetics: response.data[0].phonetics,
     });
-    // console.log(result.word);
-    // console.log(result.meanings);
-    // console.log(result.origin);
-    // console.log(result.audio);
-    // console.log(result.text);
-
-    //  console.log(response.data[0].meanings);
   }
   function getWord(event) {
     event.preventDefault();
