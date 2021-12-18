@@ -1,15 +1,11 @@
-/* .App {
-  text-align: center;
-} */
-
 .App-header {
-  margin: 30px auto;
+  margin: 25px auto;
   font-family: "Tangerine", cursive;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 600;
 }
 .font-awsome-dictoinary-icon {
-  font-size: 25px;
+  font-size: 30px;
   color: rgb(15, 71, 15);
 }
 body {
@@ -39,7 +35,6 @@ h2 {
   transition: all 200ms ease-in-out;
   position: relative;
   top: -3px;
-  /* display: inline; */
 }
 
 .speaker-img:hover {
@@ -130,11 +125,5 @@ footer {
   .font-awsome-dictoinary-icon {
     font-size: 20px;
     color: rgb(15, 71, 15);
-  }
-}
-
-@media (max-width: 388px) {
-  h4 {
-    display: none;
   }
 }
