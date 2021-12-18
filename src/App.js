@@ -8,7 +8,7 @@ function App() {
         {" "}
         English Dictionary{" "}
         <span className="font-awsome-dictoinary-icon">
-          <i class="fas fa-book"></i>
+          <i className="fas fa-book"></i>
         </span>
       </header>
       <div className="container">
