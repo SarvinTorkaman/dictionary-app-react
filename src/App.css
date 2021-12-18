@@ -37,6 +37,8 @@ h2 {
 
 .speaker-img {
   transition: all 200ms ease-in-out;
+  position: relative;
+  top: -3px;
   /* display: inline; */
 }
 
