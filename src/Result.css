@@ -1,0 +1,35 @@
+.Result h2 {
+  text-align: left;
+  margin: 10px auto;
+  font-weight: 700;
+  line-height: 1cm;
+  display: inline-block;
+}
+.Result .container {
+  background-color: honeydew;
+  max-width: 80%;
+
+  padding: 30px 30px;
+  border-radius: 4px;
+}
+
+.Result .speaker-img {
+  transition: all 200ms ease-in-out;
+  position: relative;
+  top: -3px;
+}
+
+.Result .speaker-img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.synonyms {
+  padding: 3px 7px 5px 7px;
+  border: 1px solid grey;
+  border-radius: 50px;
+  margin: 3px 3px 8px 3px;
+  line-height: 2.4;
+  white-space: nowrap;
+  color: rgb(9, 56, 30);
+}

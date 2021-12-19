@@ -13,7 +13,7 @@ function App() {
       </header>
       <div className="container">
         <main>
-          <Dictionary />{" "}
+          <Dictionary wordToSearch="sunset" />{" "}
         </main>{" "}
       </div>
       <footer className="text-center ">

@@ -1,6 +1,7 @@
 import React from "react";
 import Meanings from "./Meanings";
 import Phonetics from "./Phonetics";
+import "./Result.css";
 
 export default function Result(props) {
   function speak() {
