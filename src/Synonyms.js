@@ -8,10 +8,10 @@ export default function Synonyms(props) {
       <div className="d-inline">
         <br />
         Synonyms:{" "}
-        {props.synonyms.map((synonyms, index) => {
+        {props.synonyms.map((synonym, index) => {
           return (
             <span className="synonyms" key={index}>
-              {synonyms}
+              {synonym}
             </span>
           );
         })}

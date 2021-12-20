@@ -1,4 +1,4 @@
-.App-header {
+.App-header h1 {
   margin: 25px auto;
   font-family: "Tangerine", cursive;
   font-size: 50px;
@@ -47,14 +47,28 @@ footer {
     max-width: 50%;
   }
 
-  .App-header {
+  .App-header h1 {
     margin: 30px auto;
     font-family: "Tangerine", cursive;
     font-size: 30px;
     font-weight: 600;
+    margin: 0 auto;
   }
   .font-awsome-dictoinary-icon {
     font-size: 20px;
     color: rgb(15, 71, 15);
+  }
+
+  small {
+    position: relative;
+    top: -9px;
+    left: -32px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 460px) {
+  small {
+    visibility: hidden;
   }
 }
