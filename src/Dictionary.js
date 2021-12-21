@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Result from "./Result";
+import Photos from "./Photos";
 import "./Dictionary.css";
 export default function Dictionary(props) {
   const [word, setWord] = useState(props.wordToSearch);
   const [loaded, setLoaded] = useState(false);
   const [result, setResult] = useState(null);
+  const [photos, setPhotos] = useState(null);
   function getValue(event) {
     setWord(event.target.value);
   }
 
-  function getResponse(response) {
+  function getResponseFromDictionary(response) {
     setResult({
       word: response.data[0].word,
       meanings: response.data[0].meanings,
@@ -19,15 +21,28 @@ export default function Dictionary(props) {
     });
   }
 
-  function search(input) {
-    if (input.length > 0) {
-      let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${input}`;
-      // console.log(apiUrl);
-      axios.get(apiUrl).then(getResponse);
+  function getResponseFromPexels(response) {
+    console.log(response.data);
+    setPhotos(response.data.photos);
+  }
+  function search() {
+    if (word.length > 0) {
+      let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+      console.log(apiUrl);
+      axios.get(apiUrl).then(getResponseFromDictionary);
 
       axios.get(apiUrl).catch(function (error) {
-        alert(`${input} is not found in english dictionary`);
+        alert(`${word} is not found in english dictionary`);
       });
+
+      const pexelApiKey =
+        "563492ad6f9170000100000139761edd5c524abdabdedfe91905fd99";
+      const header = `Bearer ${pexelApiKey}`;
+
+      let pexelApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=9`;
+      axios
+        .get(pexelApiUrl, { headers: { Authorization: header } })
+        .then(getResponseFromPexels);
     } else {
       alert("Enter a word");
     }
@@ -37,13 +52,13 @@ export default function Dictionary(props) {
     event.preventDefault();
     //documentation: https://dictionaryapi.dev
 
-    search(word);
+    search();
   }
 
   function load() {
     setLoaded(true);
 
-    search(word);
+    search();
   }
 
   if (loaded) {
@@ -72,6 +87,7 @@ export default function Dictionary(props) {
         </small>
 
         <Result result={result} />
+        <Photos photos={photos} />
       </div>
     );
   } else {
