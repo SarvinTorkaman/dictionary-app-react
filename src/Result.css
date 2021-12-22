@@ -3,12 +3,14 @@
   padding: 10px;
   margin: 10px auto;
   font-weight: 700;
-  line-height: 1cm;
+  line-height: 1.5cm;
   display: inline-block;
+  color: var(--primary-color);
+  font-size: 35px;
 }
 .Result .container {
   background-color: honeydew;
-  max-width: 80%;
+  max-width: 70%;
 
   padding: 30px 30px;
   border-radius: 4px;
