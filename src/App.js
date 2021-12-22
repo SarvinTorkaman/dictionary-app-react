@@ -22,7 +22,15 @@ function App() {
         </main>{" "}
       </div>
       <footer className="text-center ">
-        Coded by Sarvin and open-sourced at{" "}
+        Coded by{" "}
+        <a
+          href="https://elegant-stonebraker-6f49e2.netlify.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Sarvin
+        </a>{" "}
+        and open-sourced at{" "}
         <a
           href="https://github.com/SarvinTorkaman/dictionary-app-react"
           target="_blank"
